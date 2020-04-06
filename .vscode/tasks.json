@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "run",
+            "command": "hugo server -D"
+        },
+        {
+            "label": "build",
+            "command": "hugo -D"
+        }
+    ]
+}

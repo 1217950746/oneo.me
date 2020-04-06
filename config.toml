@@ -1,0 +1,4 @@
+baseURL = "https://oneo.me/"
+languageCode = "en-us"
+title = "ONEO"
+theme = "hugo-notepadium"
