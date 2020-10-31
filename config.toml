@@ -1,9 +1,0 @@
-baseURL = "https://oneo.me/"
-languageCode = "en-us"
-title = "ONEO"
-copyright = "© 2020 ONEO <a href='http://beian.miit.gov.cn' target='blank'>桂ICP备15007841号-1</a>"
-theme = "hugo-notepadium"
-publishDir = "docs"
-
-[params]
-slogan = "每个人都能找到最终的归宿"

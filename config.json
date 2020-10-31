@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://oneo.me/",
+    "title": "ONEO",
+    "slogan": "每个人都能找到最终的归宿",
+    "copyright": "© 2020 ONEO <a href='http://beian.miit.gov.cn' target='blank'>桂ICP备15007841号-1</a>",
+    "publishDir": "docs",
+    "languageCode": "en-us"
+}
