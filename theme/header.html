@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    {% if current.isHome %}
+    <title>{{ site.title }} - {{ site.slogan }}</title>
+    {% else %}
+    <title>{{ post.title }} - {{ site.title}}</title>
+    {% endif %}
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <body>
+        <div class="base-body">
+            <section id="header" class="site header">
+                <div class="header wrap">
+                    <span class="header left-side">
+                        <a class="site home" href="{{ site.url }}"><span class="site name">{{ site.title}}</span></a>
+                    </span>
+                    <span class="header right-side">
+                        <div class="nav wrap">
+                            <nav class="nav">
+                                <a class="nav item" href="{{ site.url }}">首页</a>
+                            </nav>
+                        </div>
+                    </span>
+                </div>
+                <div class="site slogan"><span class="title">{{ site.slogan }}</span></div>
+            </section>

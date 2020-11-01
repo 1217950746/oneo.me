@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" /><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>WPF 字符串格式化 - ONEO</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <body>
+        <div class="base-body">
+            <section id="header" class="site header">
+                <div class="header wrap">
+                    <span class="header left-side">
+                        <a class="site home" href="https://oneo.me/"><span class="site name">ONEO</span></a>
+                    </span>
+                    <span class="header right-side">
+                        <div class="nav wrap">
+                            <nav class="nav">
+                                <a class="nav item" href="https://oneo.me/">首页</a>
+                            </nav>
+                        </div>
+                    </span>
+                </div>
+                <div class="site slogan"><span class="title">每个人都能找到最终的归宿</span></div>
+            </section>
+
+            <div class="article-container">
+                <section class="article header">
+                    <h1 class="article title">WPF 字符串格式化</h1>
+                    <p class="article date">2020-07-28</p>
+                </section>
+                <article class="article markdown-body">
+                    <p>货币格式</p>
+<pre><code class="language-xml">&lt;!-- $123.46 --&gt;
+&lt;TextBlock Text=&quot;{Binding Price, StringFormat={}{0:C}}&quot; /&gt;
+&lt;!-- $123.5 --&gt;
+&lt;TextBlock Text=&quot;{Binding Price, StringFormat={}{0:C1}}&quot; /&gt;
+</code></pre>
+<p>指定长度</p>
+<pre><code class="language-xml">&lt;!-- 086723 --&gt;
+&lt;TextBlock Text=&quot;{Binding Count, StringFormat={}{0:D6}}&quot; /&gt;
+&lt;!-- 28768234.9329 --&gt;
+&lt;TextBlock Text=&quot;{Binding Total, StringFormat={}{0:F4}}&quot; /&gt;
+&lt;!-- 28,768,234.933 --&gt;
+&lt;TextBlock Text=&quot;{Binding Total, StringFormat={}{0:N3}}&quot; /&gt;
+</code></pre>
+<p>百分比</p>
+<pre><code class="language-xml">&lt;!-- 78.9 % --&gt;
+&lt;TextBlock Text=&quot;{Binding Persent, StringFormat={}{0:P1}}&quot; /&gt;
+</code></pre>
+<p>占位符</p>
+<pre><code class="language-xml">&lt;!-- 0123.46 --&gt;
+&lt;TextBlock Text=&quot;{Binding Price, StringFormat={}{0:0000.00}}&quot; /&gt;
+&lt;!-- 123.46 --&gt;
+&lt;TextBlock Text=&quot;{Binding Price, StringFormat={}{0:####.##}}&quot; /&gt;
+</code></pre>
+<p>日期</p>
+<pre><code class="language-xml">&lt;!-- 5/4/2015 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:d}}&quot; /&gt;
+&lt;!-- Monday, May 04, 2015 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:D}}&quot; /&gt;
+&lt;!-- Monday, May 04, 2015 5:46 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:f}}&quot; /&gt;
+&lt;!-- Monday, May 04, 2015 5:46:56 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:F}}&quot; /&gt;
+&lt;!-- 5/4/2015 5:46 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:g}}&quot; /&gt;
+&lt;!-- 5/4/2015 5:46:56 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:G}}&quot; /&gt;
+&lt;!-- May 04 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:m}}&quot; /&gt;
+&lt;!-- May 04 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:M}}&quot; /&gt;
+&lt;!-- 5:46 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:t}}&quot; /&gt;
+&lt;!-- 5:46:56 PM --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:T}}&quot; /&gt;
+&lt;!-- 2015年05月04日 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:yyyy年MM月dd日}}&quot; /&gt;
+&lt;!-- 2015-05-04 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:yyyy-MM-dd}}&quot; /&gt;
+&lt;!-- 2015-05-04 17:46 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:yyyy-MM-dd HH:mm}}&quot; /&gt;
+&lt;!-- 2015-05-04 17:46:56 --&gt;
+&lt;TextBlock Text=&quot;{Binding DateTimeNow, StringFormat={}{0:yyyy-MM-dd HH:mm:ss}}&quot; /&gt;
+</code></pre>
+
+                </article>
+            </div>
+            <section id="footer" class="footer">
+                <div class="footer-wrap">
+                    <p class="copyright">© 2020 ONEO <a href="http://beian.miit.gov.cn" target="blank">桂ICP备15007841号-1</a></p>
+                    <p class="powerby"><span>Powered by </span><a href="https://github.com/1217950746/Sheep" target="_blank">Sheep</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/"
+                        target="_blank">Notepadium</a></p>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
+

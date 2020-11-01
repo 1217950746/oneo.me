@@ -1,0 +1,15 @@
+{{ import 'header' }}
+            <div id="content">
+                <ul class="note list">
+                    {% for post in posts %}
+                    <li class="item">
+                        <a class="note" href="{{ post.url }}">
+                            <p class="note title">{{ post.title }}</p>
+                            <p class="note date">{{ post.date }}</p>
+                            <p class="note content">{{ post.summary }}</p></a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+{{ import 'footer' }}
