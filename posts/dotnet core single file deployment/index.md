@@ -1,7 +1,6 @@
 ---
 title: '.Net Core 单文件部署'
 date: 2020-10-31 17:44
-draft: true
 ---
 
 ## 不可用 API
