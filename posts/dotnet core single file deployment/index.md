@@ -22,7 +22,7 @@ date: 2020-10-31 17:44
 ```xml
 <Project>
     <PropertyGroup>
-        <!-- 使用 AppHost -->
+        <!-- 使用 AppHost，false 不会生成可执行文件 -->
         <UseAppHost>true</UseAppHost>
         <!-- 设置目标 -->
         <RuntimeIdentifier>win10-x64</RuntimeIdentifier>

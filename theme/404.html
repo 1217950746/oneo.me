@@ -1,0 +1,11 @@
+{{ import 'header' }}
+            <div class="article-container">
+                <section class="article header">
+                    <h1 class="article title">{{ post.title }}</h1>
+                    <p class="article date">{{ post.date }}</p>
+                </section>
+                <article class="article markdown-body">
+                    {{ post.content }}
+                </article>
+            </div>
+{{ import 'footer' }}
